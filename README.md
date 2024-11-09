@@ -46,10 +46,6 @@ $ npm run build
 ---
 
 
---- 
-
-## Contributing 
-
 
 ## Connect
 
