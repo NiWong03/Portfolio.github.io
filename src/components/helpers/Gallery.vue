@@ -24,7 +24,7 @@
       </div>
     </div>
     <div id="myModal" class="modal">
-      <span class="close">&times;</span>
+      <span class="Close">&times;</span>
       <img class="modal-content" id="modalImg" />
       <div id="caption"></div>
     </div>
