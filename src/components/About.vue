@@ -42,7 +42,7 @@
             </p>
             <p>
               <!-- Add more text content as needed -->
-              In my free time, I enjoy working on personal projects, playing basketball, working out, and staying updated with the latest trends in technology. I believe in continuous learning and strive to keep myself updated with the latest advancements in the field.
+              In my free time, I enjoy working on personal projects, contributing to open-source communities, and staying updated with the latest trends in technology. I believe in continuous learning and strive to keep myself updated with the latest advancements in the field.
             </p>
           </div>
         </div>
