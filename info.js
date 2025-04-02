@@ -121,6 +121,16 @@ let info = {
       info: [
       ],
       icon: require("./assets/skills/qt.svg")
+    },
+    {
+      title: "Java",
+      info:[],
+      icon: require('./assets/skills/java.svg')
+    },
+    {
+      title: "SQL",
+      info:[],
+      icon: require('./assets/skills/sql.png')
     }
   ],
   portfolio: [
