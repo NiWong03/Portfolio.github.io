@@ -120,7 +120,7 @@ let info = {
       title: "QT",
       info: [
       ],
-      icon: require("./assets/skills/java.svg")
+      icon: require("./assets/skills/qt.svg")
     },
     {
       title: "Java",
