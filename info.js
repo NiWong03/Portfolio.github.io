@@ -161,6 +161,22 @@ let info = {
         "MangaReact is a responsive web application designed to enhance your manga reading experience. Our app leverages the power of React and the extensive MangaDex API to bring you a seamless, user-friendly interface for discovering and enjoying your favorite manga. "
     },
     {
+      name:"TripCreator",
+      pictures:[
+        {img: require("./src/assets/portfolio/TC/TripCreator-demo.gif")},
+        {img: require("./src/assets/portfolio/TC/TripCreator-ssLogin.png")},
+        {img: require("./src/assets/portfolio/TC/TripCreator_addtrip_ss.png")},
+        {img: require("./src/assets/portfolio/TC/Trip-creator-ss2.png")}
+        
+      ],
+      technologies: ["React", "Firebase", "Cypress", "Next.js", "TypeScript", "Tailwind.css", "Google Cloud Platform"],
+      category: "Web App",
+      github: "https://github.com/NiWong03/trip-creator",
+      visit:"https://trip-creator.vercel.app/",
+      description:"TripCreator is a planning itinerary web platform. The purpose of this platform is to help users plan their trips, view all locations, and calculate the overall budget. "
+
+    },
+    {
       name: "SkyTrack",
       pictures: [
         {
