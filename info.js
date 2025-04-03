@@ -135,6 +135,14 @@ let info = {
       icon: require('./assets/skills/sql.png')
     }
   ],
+  certifications: [
+    {
+      title: "Asana Workflow Specialist",
+      url: "https://certifications.asana.com/998257a6-4691-455e-91fb-29253a0b6050#acc.mbejJ97M",
+      info: [],
+      icon: require('./assets/skills/workflowspecialist.png')
+    }
+  ],
   portfolio: [
     {
       name: "MangaReact",
