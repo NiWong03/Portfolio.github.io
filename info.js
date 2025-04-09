@@ -14,8 +14,7 @@ let info = {
     linkedin: "https://www.linkedin.com/in/nicholas-wong-110b2b231/",
     github: "https://github.com/NiWong03",
     instagram: "https://www.instagram.com/notn1ckwong",
-    resume:
-      "/Resume.pdf"
+    resume: "/Resume.pdf"
   },
   education: [
     {

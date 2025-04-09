@@ -51,7 +51,7 @@ export default {
     return {
       linkedin: info.links.linkedin,
       github: info.links.github,
-      Instagram: info.links.Instagram,
+      Instagram: info.links.instagram,
       resume: info.links.resume,
     };
   },
@@ -68,13 +68,13 @@ export default {
           window.open(this.Instagram, "_blank");
           break;
         case "resume":
-            const link = document.createElement('a');
-            link.href = this.resume;
-            link.download = 'resume.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          break;
+         const resumeLink = document.createElement('a');
+         resumeLink.href = this.resume;  // This should point to the correct URL
+         resumeLink.download = 'resume.pdf';
+         document.body.appendChild(resumeLink);
+         resumeLink.click();
+         document.body.removeChild(resumeLink);
+         break;
       }
     },
   },
