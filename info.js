@@ -132,6 +132,12 @@ let info = {
       info:[
       ],
       icon: require('./assets/skills/sql.png')
+    },
+    {
+      title: "R",
+      info:[
+      ],
+      icon: require('./assets/skills/R.png')
     }
   ],
   certifications: [
@@ -184,6 +190,30 @@ let info = {
 
     },
     {
+      name: "Readdit",
+      pictures: [
+        {
+          img: require("./src/assets/portfolio/Readdit/Readdit_Demo.gif"),
+        },
+        {
+          img: require("./src/assets/portfolio/Readdit/Readdit_Screenshot.png")
+        }
+      ],
+      technologies: [
+        "Python",
+        "PyLucene",
+        "Flask",
+        "HTML",
+        "CSS",
+        "PyRaw"
+      ],
+      category: "Search Engine",
+      github: "https://github.com/NiWong03/cs172Project",
+      visit: "https://github.com/NiWong03/cs172Project",
+      description:
+        "This project is a full-stack Reddit search engine that combines web crawling, indexing, and a searchable web interface to explore Reddit readding and Literature relatted content efficiently. "
+    },
+    {
       name: "SkyTrack",
       pictures: [
         {
@@ -208,6 +238,35 @@ let info = {
       visit: "https://github.com/NiWong03/CS100-Weather-DeskApp",
       description:
         "A Weather Desktop application using C++ and the QT framework, featuring a Pomodoro timer,to-do list, quote generator, calendar, and temperature converter."
+    },
+    {
+      name: "NBA 2023-24 Stats Analysis",
+      pictures: [
+        {
+          img: require("./src/assets/portfolio/NBA_Analysis/AnalysisScreenshot1.png"),
+        },
+        {
+          img: require("./src/assets/portfolio/NBA_Analysis/AnalysisScreenShot2.png")},
+        {img: require("./src/assets/portfolio/NBA_Analysis/AnalysisScreenShot3.png"),},
+        {img: require("./src/assets/portfolio/NBA_Analysis/AnalysisScreenShot4.png"),},
+        {img: require("./src/assets/portfolio/NBA_Analysis/AnalysisScreenShot5.png"),},
+        {img: require("./src/assets/portfolio/NBA_Analysis/AnalysisScreenShot6.png"),},
+        
+
+      ],
+      technologies: [
+        "R",
+        "Shiny",
+        "ggplot2",
+        "dplyr",
+        "tidyr",
+        "tidyverse",
+      ],
+      category: "Statistical Analysis",
+      github: "https://github.com/NiWong03/bus110",
+      visit: "https://niwong03.shinyapps.io/NBAStats/",
+      description:
+        "An interactive Shiny dashboard that allows users to explore and analyze NBA player and team statistics through dynamic visualizations and filters, complemented by a regression analysis report that investigates key performance predictors."
     },
     {
       name: "Chrome Extension Theme",
@@ -244,7 +303,7 @@ let info = {
       visit: "https://github.com/NiWong03/2D-Game",
       description:
         "A 2D Zelda-style game with depth and collision features using Python and the Pygame library."
-    }
+    },
   ],
   portfolio_design: [
     {
