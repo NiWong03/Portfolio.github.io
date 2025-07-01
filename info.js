@@ -14,21 +14,21 @@ let info = {
     linkedin: "https://www.linkedin.com/in/nicholas-wong-110b2b231/",
     github: "https://github.com/NiWong03",
     instagram: "https://www.instagram.com/notn1ckwong",
-    resume: "/Resume.pdf"
+    resume: "/Nicholas_Wong_Resume.pdf"
   },
   education: [
+    {
+      name: "University of California, Riverside",
+      place: "CA",
+      date: "Sep, 2021 - Jun, 2025",
+      degree: "B.S. Computer Science with Business Applications",
+    },
     {
       name: "Galileo Academy of Science and Technology",
       place: "San Fracisco, CA",
       date: "Aug, 2017 - Jun, 2021",
       degree: "High School Diploma",
     },
-    {
-      name: "University of California, Riverside",
-      place: "Riverside, CA",
-      date: "Sep, 2021 - Jun, 2025",
-      degree: "B.S. Computer Science with Business Applications",
-    }
   ],
   skills: [
     {
