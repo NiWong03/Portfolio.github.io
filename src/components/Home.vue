@@ -100,7 +100,7 @@ export default {
           const resumePath = this.resume;
           const a = document.createElement('a');
           a.href = resumePath;
-          a.download = 'Resume.pdf';
+          a.download = 'Nicholas_Wong_Resume.pdf';
           document.body.appendChild(a);
           a.click();
           document.body.removeChild(a);

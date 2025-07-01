@@ -70,7 +70,7 @@ export default {
         case "resume":
          const resumeLink = document.createElement('a');
          resumeLink.href = this.resume;  // This should point to the correct URL
-         resumeLink.download = 'resume.pdf';
+         resumeLink.download = 'Nicholas_Wong_Resume.pdf';
          document.body.appendChild(resumeLink);
          resumeLink.click();
          document.body.removeChild(resumeLink);
