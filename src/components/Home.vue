@@ -120,7 +120,21 @@ export default {
 img {
   max-width: 300px;
   margin-top: 60px;
+  margin-bottom: 60px;
   transform: rotateY(180deg);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(-10px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
 }
 
 @media only screen and (max-width: 580px) {

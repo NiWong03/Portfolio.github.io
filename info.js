@@ -9,7 +9,7 @@ let info = {
     }
   },
   description:
-    "I'm a student at the University of California, Riverside currently studying Computer Science with Business Applications.",
+    "I'm a recent new grad from the University of California, Riverside with a B.S. in Computer Science with Business Applications.",
   links: {
     linkedin: "https://www.linkedin.com/in/nicholas-wong-110b2b231/",
     github: "https://github.com/NiWong03",
@@ -197,7 +197,7 @@ let info = {
         },
         {
           img: require("./src/assets/portfolio/Readdit/Readdit_Screenshot.png")
-        }
+        },
       ],
       technologies: [
         "Python",
