@@ -30,6 +30,15 @@ let info = {
       degree: "High School Diploma",
     },
   ],
+  Experience: [
+    {
+      name: "Handshake",
+      place: "San Francisco, CA",
+      date: "Nov 2025 - Present",
+      position: "Data Annotator",
+      description:"Annotated and curated multimodal datasets (audio, visual, text) for large-scale projects, by reviewing and refining data to ensure high-quality AI training. Performed quality control checks to maintain baseline accuracy and ensure consistent, reliable labeling standards."
+    },
+  ],
   skills: [
     {
       title: "C/C++",
@@ -150,28 +159,55 @@ let info = {
   ],
   portfolio: [
     {
-      name: "MangaReact",
+      name: "GymReact",
       pictures: [
         {
-          img: require("./src/assets/portfolio/MangaReact/mangareact copy.gif")
+          img: require("./src/assets/portfolio/GymReact/LiftSmart-Demo copy.gif")
         },
         {
-          img: require("./src/assets/portfolio/MangaReact/ss_home copy.png")
+          img: require("./src/assets/portfolio/GymReact/ss1 copy.png")
         },
         {
-          img: require("./src/assets/portfolio/MangaReact/ss_about copy.png")
+          img: require("./src/assets/portfolio/GymReact/ss2 copy.png")
         },
         {
-          img: require("./src/assets/portfolio/MangaReact/ss_recentlyadded copy.png")
+          img: require("./src/assets/portfolio/GymReact/ss3 copy.png")
+        },
+        {
+          img: require("./src/assets/portfolio/GymReact/ss5 copy.png")
+        },
+      ],
+      technologies: ["React Native","Expo", "Firebase", "OpenAI API", "TypeScript"],
+      category: "Mobile App",
+      github:
+        "https://github.com/NiWong03/LiftSmart",
+      visit: "https://github.com/NiWong03/LiftSmart",
+      description:
+        "A lightweight, AI-powered fitness app built with React Native and Expo that helps users track workouts, set goals, and achieve their fitness objectives through personalized planning and intelligent suggestions."
+    },
+    {
+      name: "CapyReads",
+      pictures: [
+        {
+          img: require("./src/assets/portfolio/CapyReads/CapyReads copy.gif")
+        },
+        {
+          img: require("./src/assets/portfolio/CapyReads/ss_home copy.png")
+        },
+        {
+          img: require("./src/assets/portfolio/CapyReads/ss_about copy.png")
+        },
+        {
+          img: require("./src/assets/portfolio/CapyReads/ss_recentlyadded copy.png")
         }
       ],
       technologies: ["React","AWS", "EC2", "REST API", "MUI"],
       category: "Web App",
       github:
-        "https://github.com/NiWong03/MangadexReact",
-      visit: "https://github.com/NiWong03/MangadexReact",
+        "https://github.com/NiWong03/CapyReads",
+      visit: "https://github.com/NiWong03/CapyReads",
       description:
-        "MangaReact is a responsive web application designed to enhance your manga reading experience. Our app leverages the power of React and the extensive MangaDex API to bring you a seamless, user-friendly interface for discovering and enjoying your favorite manga. "
+        "CapyReads is a responsive web application designed to enhance your manga reading experience. Our app leverages the power of React and the extensive MangaDex API to bring you a seamless, user-friendly interface for discovering and enjoying your favorite manga. "
     },
     {
       name:"TripCreator",

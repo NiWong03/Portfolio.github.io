@@ -35,8 +35,8 @@
               Email: Nicholasdwnwong@gmail.com
             </p>
             <p data-aos="fade" data-aos-once="true" data-aos-duration="1000" data-aos-delay="600">
-              <i class="fas fa-phone-square"></i> Phone: (415) 601-3533
-            </p>
+              <i class="fas fa-phone-square"></i> Phone: (415) 375-0261
+            </p> 
             <p data-aos="fade" data-aos-once="true" data-aos-duration="1000" data-aos-delay="900">
               <i class="fas fa-map-marker-alt"></i> Location: San Francisco, CA<br>Open to Remote / Relocation
             </p>
