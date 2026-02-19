@@ -151,6 +151,12 @@ let info = {
   ],
   certifications: [
     {
+      title: "AWS Certified Cloud Practitioner",
+      url: "https://www.credly.com/badges/926b1832-aceb-4bb3-877b-edbc43b5a855/public_url",
+      info: [],
+      icon: require('./assets/skills/aws-certified-cloud-practitioner.png')
+    },
+    {
       title: "Asana Workflow Specialist",
       url: "https://certifications.asana.com/998257a6-4691-455e-91fb-29253a0b6050#acc.mbejJ97M",
       info: [],
