@@ -223,6 +223,25 @@ let info = {
         "CapyReads is a responsive web application designed to enhance your manga reading experience. Our app leverages the power of React and the extensive MangaDex API to bring you a seamless, user-friendly interface for discovering and enjoying your favorite manga. "
     },
     {
+      name: "BitSprint",
+      pictures: [
+        {
+          img: require("./src/assets/portfolio/BitSprint.gif")
+        },
+      ],
+      technologies: [
+        "C#",
+        "Unity",
+        "Codex",
+        "UnityMCP"
+      ],
+      category: "2D 8-bit endless runner",
+      github: "https://github.com/NiWong03/bitsprint-8bit-runner",
+      visit: "https://github.com/NiWong03/bitsprint-8bit-runner",
+      description:
+        "BitSprint is an arcade-style 2D 8-bit endless runner in Unity 2D using C#, with Codex and Cursor accelerating development and UnityMCP automating Unity setup and iteration. The game includes three difficulty levels, dynamic obstacle spawning, score and persistent high-score tracking, lose/restart conditions, and polished visuals via procedural sprites, parallax backgrounds, and HUD enhancements, with Git/GitHub used for version control and delivery."
+    },
+    {
       name:"TripCreator",
       pictures:[
         {img: require("./src/assets/portfolio/TC/TripCreator-demo.gif")},
@@ -261,7 +280,7 @@ let info = {
       visit: "https://github.com/NiWong03/cs172Project",
       description:
         "This project is a full-stack Reddit search engine that combines web crawling, indexing, and a searchable web interface to explore Reddit readding and Literature relatted content efficiently. "
-    },
+      },
     {
       name: "SkyTrack",
       pictures: [
@@ -335,23 +354,6 @@ let info = {
       visit: "https://github.com/NiWong03/extension1",
       description:
         "Customized Chrome extension theme using HTML and CSS to integrate date and time widgets. Implemented JavaScript to display weather information through the OpenWeatherMap API."
-    },
-    {
-      name: "Deb Game",
-      pictures: [
-        {
-          img: require("./src/assets/portfolio/DB.png")
-        },
-      ],
-      technologies: [
-        "Python",
-        "Pygame",
-      ],
-      category: "2-D Game (Python)",
-      github: "https://github.com/NiWong03/2D-Game",
-      visit: "https://github.com/NiWong03/2D-Game",
-      description:
-        "A 2D Zelda-style game with depth and collision features using Python and the Pygame library."
     },
   ],
   portfolio_design: [
