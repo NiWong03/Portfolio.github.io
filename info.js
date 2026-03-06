@@ -158,10 +158,17 @@ let info = {
     },
     {
       title: "Asana Workflow Specialist",
-      url: "https://certifications.asana.com/998257a6-4691-455e-91fb-29253a0b6050#acc.mbejJ97M",
+      url: "https://certifications.asana.com/a0eec84e-e48f-490f-a359-1b8f7a20cccf#acc.9mfT5Q1H",
       info: [],
       icon: require('./assets/skills/workflowspecialist.png')
+    },
+    {
+      title: "AI Studio Foundations Skill Badge",
+      url: "https://certifications.asana.com/76a525c9-5cf5-439c-974b-77330a6463ac",
+      info: [],
+      icon: require('./assets/skills/AIStudioFoundations.jpeg')
     }
+
   ],
   portfolio: [
     {
