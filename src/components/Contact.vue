@@ -96,7 +96,7 @@ export default {
   padding: 10px;
   border-radius: 8px;
   margin: 10px 0;
-  background: #f8f9fa;
+  background: #f0ebe3;
 }
 
 .icon {
@@ -106,7 +106,7 @@ export default {
 
 /* Light Mode Colors */
 .bg-light {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa7e;
 }
 
 .text-dark {
@@ -123,12 +123,11 @@ export default {
 
 /* Dark Mode Colors */
 .bg-dark {
-  background-color: ##f8f9fa;
+  background-color: #212529;
 }
 
 .text-light {
   color: #f8f9fa;
-
 }
 
 .icon-light {
@@ -175,7 +174,7 @@ export default {
     display:flex;
     align-items: center;
     padding: 10px;
-    background: #f8f9fa
+    background: #f0ebe3
   }
 
   .icon {
@@ -198,7 +197,7 @@ export default {
 
 
 .bg-light {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa7e;
 }
 
 .text-dark {

@@ -32,7 +32,11 @@
                   {{ e.degree || e.position }}
                 </div>
                 <div class="px-2 date">{{ e.date }}</div>
-                <div class="px-2 pb-2 pt-2" style="text-align: justify;">
+                <div
+                  v-if="e.description"
+                  class="px-2 pb-2 pt-2"
+                  style="text-align: justify;"
+                >
                   {{ e.description }}
                 </div>
                 <span

@@ -73,13 +73,11 @@
 </template>
 
 <script>
-import Carousel from "./Carousel";
 import Gallery from "./Gallery";
 
 export default {
   name: "Modal",
   components: {
-    Carousel,
     Gallery,
   },
   props: {
@@ -155,6 +153,10 @@ a:hover {
   transition: all 0.3s ease;
   flex-direction: column;
   display: flex; /*added*/
+}
+
+.modal-container.bg-light {
+  background-color: #f8f9fa !important;
 }
 
 @media screen and (max-width: 1600px) {

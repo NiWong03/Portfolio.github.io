@@ -4,7 +4,6 @@
     <div class="parent">
       <Home :nightMode="nightMode" />
       <About id="about" :nightMode="nightMode" />
-      <Experience id="experience" :nightMode="nightMode" />
       <Skills id="skills" :nightMode="nightMode" />
       <Certifications id= "certifications" :nightMode="nightMode" />
       <Portfolio id="portfolio" :nightMode="nightMode" />
@@ -18,7 +17,6 @@
 import Navbar from "./components/Navbar.vue";
 import Home from "./components/Home";
 import About from "./components/About";
-import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Certifications from "./components/Certifications";
 import Portfolio from "./components/Portfolio";
@@ -33,7 +31,6 @@ export default {
     Navbar,
     Home,
     About,
-    Experience,
     Skills,
     Certifications,
     Portfolio,
@@ -52,7 +49,7 @@ export default {
     }
   },
   mounted() {
-    ["About", "Experience", "Contact", "Skills", "Portfolio"].forEach((l) => {
+    ["About", "Contact", "Skills", "Portfolio"].forEach((l) => {
       if (window.location.href.includes(l)) {
         var elementPosition = document.getElementById(l).offsetTop;
         window.scrollTo({ top: elementPosition - 35, behavior: "smooth" });
@@ -82,12 +79,25 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #f0ebe3;
+}
+
+.bg-white {
+  background-color: #f0ebe3 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa7e !important;
+}
+
 #app {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   width: 100%;
+  background-color: #f0ebe3;
 }
 
 @media screen and (max-width: 580px) {
@@ -131,7 +141,7 @@ export default {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 9px;
-  border: 2px solid white; /* Use your background color instead of White */
+  border: 2px solid #f0ebe3;
   background-clip: content-box;
 }
 

@@ -19,9 +19,9 @@
         :class="{ pgray: !nightMode, 'bg-secondary': nightMode }"
       />
       <br />
-      <div class="row">
+      <div class="row skills-grid">
         <div
-          class="col-3 text-center pb-3 px-2"
+          class="col-3 text-center pb-3 px-2 skill-col"
           v-for="(skill, idx) in skills"
           :key="skill.title"
           data-aos="fade-up"
@@ -33,7 +33,7 @@
           data-aos-mirror="true"
           data-aos-once="true"
         >
-          <div class="bg-div">
+          <div class="bg-div skill-icon-wrap">
             <img :src="skill.icon" alt="Skill Icon" />
           </div>
           <div class="title2 pt-1">{{ skill.title }}</div>
@@ -73,28 +73,65 @@ export default {
 }
 
 .bg-div img {
-  max-width: 50px; /* Adjust the size as needed */
-  margin-bottom: 10px; /* Reduce margin to make space smaller */
+  display: block;
+  max-width: 78px;
+  max-height: 78px;
+  object-fit: contain;
 }
 
 .title2 {
   font-size: 20px;
   font-weight: 500;
-  margin-top: 5px; /* Reduce margin to make space smaller */
+  line-height: 1.25;
+  margin-top: 12px;
+  min-height: 50px;
 }
 
 .title3 {
   font-size: 16px;
   font-weight: 400;
-  margin-top: 5px; /* Reduce margin to make space smaller */
+  margin-top: 5px;
 }
-.row {
+
+.skills-grid {
   margin-left: -5px;
   margin-right: -5px;
 }
 
-.col-3 {
+.skill-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-left: 2px;
   padding-right: 2px;
+}
+
+.skill-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92px;
+  width: 100%;
+}
+
+.skill-col hr {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 580px) {
+  .title2 {
+    font-size: 18px;
+    min-height: 46px;
+  }
+
+  .skill-icon-wrap {
+    height: 82px;
+  }
+
+  .bg-div img {
+    max-width: 68px;
+    max-height: 68px;
+  }
 }
 </style>
