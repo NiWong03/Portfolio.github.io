@@ -35,7 +35,6 @@ export default {
     ParticleBackground,
     Home,
     About,
-    Experience,
     Skills,
     Certifications,
     Portfolio,
@@ -90,6 +89,73 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: transparent;
+}
+
+#app > *:not(.site-background) {
+  position: relative;
+  z-index: 1;
+}
+
+.site-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-color: #f0ebe3;
+
+  background-image:
+    linear-gradient(rgba(0, 229, 200, .3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 200, 0.3) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
+.particle-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+#app.text-light .site-background {
+  background-color: #262c30;
+  background-image:
+    linear-gradient(rgba(0, 229, 200, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 200, 0.25) 1px, transparent 1px);
+}
+
+#app.text-light .bg-dark,
+#app.text-light .bg-dark2 {
+  background-color: rgba(38, 44, 48, 0.88) !important;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translate3d(-2vw, 3vh, 0);
+  }
+
+  50% {
+    transform: translate3d(3vw, -4vh, 0);
+  }
+
+  100% {
+    transform: translate3d(-2vw, 3vh, 0);
+  }
+}
+
+@keyframes background-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+
+  100% {
+    transform: translate3d(2%, 2%, 0) scale(1.04);
+  }
 }
 
 @media screen and (max-width: 580px) {
