@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import VueParallaxJs from 'vue-parallax-js'
@@ -14,6 +15,7 @@ Vue.use(VueRouter)
 Vue.use(VueScrollTo)
 Vue.use(VueCookie);
 Vue.use(VueParallaxJs)
+
 Vue.config.productionTip = false
 
 const routes = [

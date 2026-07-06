@@ -1,25 +1,25 @@
 <template>
   <div id="app" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
-    <div class="site-background" aria-hidden="true"></div>
-    <div class = 'content'>
-    <ParticleBackground />
-      <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
-      <div class="parent">
-        <Home :nightMode="nightMode" />
-        <About id="about" :nightMode="nightMode" />
-        <Skills id="skills" :nightMode="nightMode" />
-        <Certifications id= "certifications" :nightMode="nightMode" />
-        <Portfolio id="portfolio" :nightMode="nightMode" />
-        <Contact id="contact" :nightMode="nightMode" />
-        <Footer :nightMode="nightMode" />
-      </div>
+    <div class="site-background" aria-hidden="true">
+      <span class="particle-field particle-field-one"></span>
+      <span class="particle-field particle-field-two"></span>
+      <span class="particle-field particle-field-three"></span>
+    </div>
+    <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
+    <div class="parent">
+      <Home :nightMode="nightMode" />
+      <About id="about" :nightMode="nightMode" />
+      <Skills id="skills" :nightMode="nightMode" />
+      <Certifications id= "certifications" :nightMode="nightMode" />
+      <Portfolio id="portfolio" :nightMode="nightMode" />
+      <Contact id="contact" :nightMode="nightMode" />
+      <Footer :nightMode="nightMode" />
     </div>
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import ParticleBackground from "./components/ParticlesBackground.vue";
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -34,8 +34,8 @@ export default {
   name: "App",
   components: {
     Navbar,
-    ParticleBackground,
     Home,
+    About,
     Skills,
     Certifications,
     Portfolio,
@@ -88,11 +88,6 @@ body {
   background-color: #f0ebe3;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-}
-
 .bg-white {
   background-color: rgba(240, 235, 227, 0.88) !important;
 }
@@ -120,25 +115,93 @@ body {
 .site-background {
   position: fixed;
   inset: 0;
-  z-index: -1;
-  pointer-events: none;
-
+  z-index: 1;
   background-color: #f0ebe3;
 
   background-image:
-    linear-gradient(rgba(0, 229, 200, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 200, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(0,0,0,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.08) 1px, transparent 1px);
 
-  background-size: 40px 40px;
+  background-size: 32px 32px;
 }
 
-.particle-canvas {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
+.site-background::before,
+.site-background::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0, 229, 200, 0.2), transparent 22%),
+    radial-gradient(circle at 76% 18%, rgba(245, 166, 35, 0.16), transparent 20%),
+    radial-gradient(circle at 62% 84%, rgba(0, 191, 165, 0.16), transparent 24%);
+  filter: blur(20px);
+  opacity: 0.15;
+  animation: background-drift 24s ease-in-out infinite alternate;
 }
 
+.site-background::after {
+  opacity: 0.32;
+  transform: rotate(12deg) scale(1.1);
+  animation-duration: 34s;
+  animation-direction: alternate-reverse;
+}
+
+.particle-field {
+   position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow:
+    6vw 12vh rgba(0, 229, 200, 0.45),
+    14vw 78vh rgba(245, 166, 35, 0.38),
+    22vw 38vh rgba(0, 191, 165, 0.5),
+    31vw 68vh rgba(0, 229, 200, 0.32),
+    42vw 18vh rgba(245, 166, 35, 0.34),
+    53vw 88vh rgba(0, 191, 165, 0.44),
+    64vw 30vh rgba(0, 229, 200, 0.42),
+    72vw 58vh rgba(245, 166, 35, 0.3),
+    81vw 22vh rgba(0, 191, 165, 0.48),
+    92vw 74vh rgba(0, 229, 200, 0.36);
+  animation: particle-float 22s linear infinite;
+}
+
+.particle-field-two {
+  width: 10px;
+  height: 10px;
+  background: rgba(245, 166, 35, 0.58);
+  box-shadow:
+    9vw 50vh rgba(245, 166, 35, 0.35),
+    18vw 24vh rgba(0, 229, 200, 0.36),
+    27vw 91vh rgba(0, 191, 165, 0.42),
+    39vw 42vh rgba(245, 166, 35, 0.3),
+    49vw 12vh rgba(0, 229, 200, 0.38),
+    58vw 70vh rgba(0, 191, 165, 0.34),
+    69vw 44vh rgba(245, 166, 35, 0.35),
+    79vw 86vh rgba(0, 229, 200, 0.36),
+    88vw 36vh rgba(0, 191, 165, 0.42),
+    96vw 10vh rgba(245, 166, 35, 0.32);
+  animation-duration: 30s;
+  animation-direction: reverse;
+}
+
+.particle-field-three {
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 191, 165, 0.38);
+  box-shadow:
+    4vw 88vh rgba(0, 191, 165, 0.26),
+    16vw 46vh rgba(0, 229, 200, 0.24),
+    34vw 9vh rgba(245, 166, 35, 0.22),
+    45vw 78vh rgba(0, 191, 165, 0.28),
+    61vw 53vh rgba(0, 229, 200, 0.26),
+    74vw 6vh rgba(245, 166, 35, 0.22),
+    84vw 65vh rgba(0, 191, 165, 0.28),
+    98vw 48vh rgba(0, 229, 200, 0.24);  animation-duration: 38s;
+}
 
 #app.text-light .site-background {
   background-color: #262c30;
