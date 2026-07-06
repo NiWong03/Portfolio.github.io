@@ -1,18 +1,15 @@
 <template>
   <div id="app" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
-    <div class="site-background" aria-hidden="true"></div>
-    <div class = 'content'>
-    <ParticleBackground />
-      <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
-      <div class="parent">
-        <Home :nightMode="nightMode" />
-        <About id="about" :nightMode="nightMode" />
-        <Skills id="skills" :nightMode="nightMode" />
-        <Certifications id= "certifications" :nightMode="nightMode" />
-        <Portfolio id="portfolio" :nightMode="nightMode" />
-        <Contact id="contact" :nightMode="nightMode" />
-        <Footer :nightMode="nightMode" />
-      </div>
+    <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
+    <div class="parent">
+      <Home :nightMode="nightMode" />
+      <About id="about" :nightMode="nightMode" />
+      <Experience id="experience" :nightMode="nightMode" />
+      <Skills id="skills" :nightMode="nightMode" />
+      <Certifications id= "certifications" :nightMode="nightMode" />
+      <Portfolio id="portfolio" :nightMode="nightMode" />
+      <Contact id="contact" :nightMode="nightMode" />
+      <Footer :nightMode="nightMode" />
     </div>
   </div>
 </template>
@@ -22,6 +19,7 @@ import Navbar from "./components/Navbar.vue";
 import ParticleBackground from "./components/ParticlesBackground.vue";
 import Home from "./components/Home";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Certifications from "./components/Certifications";
 import Portfolio from "./components/Portfolio";
@@ -36,6 +34,8 @@ export default {
     Navbar,
     ParticleBackground,
     Home,
+    About,
+    Experience,
     Skills,
     Certifications,
     Portfolio,
@@ -54,7 +54,7 @@ export default {
     }
   },
   mounted() {
-    ["About", "Contact", "Skills", "Portfolio"].forEach((l) => {
+    ["About", "Experience", "Contact", "Skills", "Portfolio"].forEach((l) => {
       if (window.location.href.includes(l)) {
         var elementPosition = document.getElementById(l).offsetTop;
         window.scrollTo({ top: elementPosition - 35, behavior: "smooth" });
@@ -84,96 +84,12 @@ export default {
 </script>
 
 <style>
-body {
-  background-color: #f0ebe3;
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-}
-
-.bg-white {
-  background-color: rgba(240, 235, 227, 0.88) !important;
-}
-
-.bg-light {
-  background-color: rgba(248, 249, 250, 0.74) !important;
-}
-
 #app {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   width: 100%;
-  min-height: 100vh;
-  position: relative;
-  background-color: transparent;
-}
-
-#app > *:not(.site-background) {
-  position: relative;
-  z-index: 1;
-}
-
-.site-background {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-
-  background-color: #f0ebe3;
-
-  background-image:
-    linear-gradient(rgba(0, 229, 200, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 200, 0.05) 1px, transparent 1px);
-
-  background-size: 40px 40px;
-}
-
-.particle-canvas {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-
-#app.text-light .site-background {
-  background-color: #262c30;
-  background-image:
-    linear-gradient(rgba(0, 229, 200, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 200, 0.12) 1px, transparent 1px);
-}
-
-#app.text-light .bg-dark,
-#app.text-light .bg-dark2 {
-  background-color: rgba(38, 44, 48, 0.88) !important;
-}
-
-@keyframes particle-float {
-  0% {
-    transform: translate3d(-2vw, 3vh, 0);
-  }
-
-  50% {
-    transform: translate3d(3vw, -4vh, 0);
-  }
-
-  100% {
-    transform: translate3d(-2vw, 3vh, 0);
-  }
-}
-
-@keyframes background-drift {
-  0% {
-    transform: translate3d(-2%, -1%, 0) scale(1);
-  }
-
-  100% {
-    transform: translate3d(2%, 2%, 0) scale(1.04);
-  }
 }
 
 @media screen and (max-width: 580px) {
@@ -217,7 +133,7 @@ body {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 9px;
-  border: 2px solid #f0ebe3;
+  border: 2px solid white; /* Use your background color instead of White */
   background-clip: content-box;
 }
 

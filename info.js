@@ -32,22 +32,11 @@ let info = {
   ],
   Experience: [
     {
-      name: "Fremont Bank",
-      place: "Livermore, CA",
-      date: "May 2026 - Present",
-      position: "AI Software Engineering Intern",
-    },
-    {
-      name: "Idler",
-      place: "San Fransisco, CA",
-      date: "Dec 2025 - Apr 2026",
-      position: "QA Engineer Contractor",
-    },
-    {
       name: "Handshake",
       place: "San Francisco, CA",
-      date: "Nov 2025 - May 2026",
+      date: "Nov 2025 - Present",
       position: "Data Annotator",
+      description:"Annotated and curated multimodal datasets (audio, visual, text) for large-scale projects, by reviewing and refining data to ensure high-quality AI training. Performed quality control checks to maintain baseline accuracy and ensure consistent, reliable labeling standards."
     },
   ],
   skills: [
@@ -182,27 +171,6 @@ let info = {
 
   ],
   portfolio: [
-    {
-      name: "Assistant BMO",
-      pictures: [
-        {
-          img: require("./src/assets/portfolio/AssistantBMO/BMO_DEMO.gif")
-        },
-        {
-          img: require("./src/assets/portfolio/AssistantBMO/AssistantBMO_SS1.png")
-        },
-        {
-          img: require("./src/assets/portfolio/AssistantBMO/AssistantBMO_SS2.png")
-        }
-      ],
-      technologies: ["TypeScript","React", "OpenAI API"],
-      category: "Chrome Add-On",
-      github:
-        "https://github.com/NiWong03/assistant_bmo",
-      visit: "https://chromewebstore.google.com/detail/bmo-assistant/pdbgihjmgdjlkihmjphgemidfkfjpijl",
-      description:
-      "BMO is a Chrome overlay assistant built for real-time browsing workflows. It stays available on top of web pages so users can read, summarize, and draft responses without leaving the tab."
-    },
     {
       name: "GymReact",
       pictures: [

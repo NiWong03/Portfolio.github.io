@@ -27,21 +27,7 @@
       />
       <div class="row">
         <div class="col-xl-6 col-bg-6 col-md-6 col-sm-12">
-          <div class="timeline-tabs" role="tablist" aria-label="About me sections">
-            <button
-              v-for="panel in panels"
-              :key="panel.key"
-              type="button"
-              class="timeline-tab"
-              :class="{ active: activePanel === panel.key, 'text-light': nightMode }"
-              role="tab"
-              :aria-selected="activePanel === panel.key"
-              @click="activePanel = panel.key"
-            >
-              {{ panel.title }}
-            </button>
-          </div>
-          <Timeline :data="activeTimeline" :nightMode="nightMode" />
+          <Timeline :data="education" :nightMode="nightMode" />
         </div>
         <div
           class="col-xl-6 col-bg-6 col-md-6 col-sm-12 mt-5"
@@ -51,12 +37,17 @@
         >
           <div class="about-text">
             <p>
+              <!-- Add your text content here -->
               I am a passionate software developer with a strong background in computer science and a keen interest in developing innovative solutions. I have experience in various programming languages and frameworks, and I am always eager to learn new technologies and improve my skills.
             </p>
             <p>
-              In my free time, I enjoy working on personal projects, playing basketball, working out, and staying updated with the latest trends in technology. 
+              <!-- Add more text content as needed -->
+              In my free time, I enjoy working on personal projects, playing basketball, working out, and staying updated with the latest trends in technology. I believe in continuous learning and strive to keep myself updated with the latest advancements in the field.
             </p>
           </div>
+        </div>
+        <div class="col-xl-6 col-bg-6 col-md-6 col-sm-12">
+          <Timeline :data="experience" :nightMode="nightMode" />
         </div>
       </div>
     </div>
@@ -79,27 +70,11 @@ export default {
   },
   data() {
     return {
-      activePanel: "experience",
       education: {
         title: "Education",
         data: info.education,
       },
-      experience: {
-        title: "Experience",
-        data: info.Experience,
-      },
     };
-  },
-  computed: {
-    panels() {
-      return [
-        { key: "experience", title: "Experience" },
-        { key: "education", title: "Education" },
-      ];
-    },
-    activeTimeline() {
-      return this.activePanel === "education" ? this.education : this.experience;
-    },
   },
 };
 </script>
@@ -108,27 +83,5 @@ export default {
 .title {
   font-size: 30px;
   font-weight: 500;
-}
-
-.timeline-tabs {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin: 18px 1rem 0;
-}
-
-.timeline-tab {
-  border: 1px solid rgba(212, 149, 97, 0.35);
-  border-radius: 6px;
-  padding: 8px 14px;
-  background: transparent;
-  color: inherit;
-  font-weight: 500;
-  transition: all 0.25s;
-}
-
-.timeline-tab:hover,
-.timeline-tab.active {
-  background: rgba(212, 149, 97, 0.16);
 }
 </style>

@@ -149,7 +149,7 @@ nav {
 }
 
 .navbar-blur {
-  background-color: #f8f9fa7e;
+  background-color: #ffffff7e;
   backdrop-filter: blur(12px);
 }
 </style>

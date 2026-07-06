@@ -17,13 +17,10 @@
           <span
             class="home-title"
             :class="{ pgray: !nightMode, 'text-light': nightMode }"
+            >Hi, I'm Nicholas Wong!</span
           >
-            {{ displayedTitle }}<span v-if="typingTitle" class="cursor">|</span>
-          </span>
           <div>
-            <p>
-              {{ displayedDescription }}<span v-if="typingDescription" class="cursor">|</span>
-            </p>
+            <p v-html="description"></p>
           </div>
           <div class="text-center pb-4">
             <button
@@ -64,9 +61,12 @@
 <script>
 import info from "../../info";
 
+import Wave from "./helpers/Wave";
+
 export default {
   name: "Home",
   components: {
+    Wave,
   },
   props: {
     nightMode: {
@@ -76,48 +76,15 @@ export default {
   data() {
     return {
       picture: info.flat_picture,
-      greeting: `Hi, I'm ${info.name}!`,
       description: info.description,
-      displayedTitle: "",
-      displayedDescription: "",
-      typingTitle: false,
-      typingDescription: false,
-      typeTimeout: null,
+      name: info.name,
       linkedin: info.links.linkedin,
       github: info.links.github,
       Instagram: info.links.instagram,
       resume: info.links.resume
     };
   },
-  mounted() {
-    this.typingTitle = true;
-    this.typeText(this.greeting, "displayedTitle", 75, () => {
-      this.typingTitle = false;
-      this.typingDescription = true;
-      this.typeText(this.description, "displayedDescription", 25, () => {
-        this.typingDescription = false;
-      });
-    });
-  },
-  beforeDestroy() {
-    if (this.typeTimeout) {
-      clearTimeout(this.typeTimeout);
-    }
-  },
   methods: {
-    typeText(text, field, speed, onComplete) {
-      let index = 0;
-      const typeNext = () => {
-        if (index < text.length) {
-          this[field] += text.charAt(index);
-          index += 1;
-          this.typeTimeout = setTimeout(typeNext, speed);
-        } else if (onComplete) {
-          onComplete();
-        }
-      };
-      typeNext();
-    },
     open(link) {
       switch (link) {
         case "linkedin":
@@ -148,25 +115,6 @@ export default {
 .home-title {
   font-size: 28px;
   font-weight: 500;
-  display: block;
-  min-height: 1.4em;
-}
-
-.cursor {
-  display: inline-block;
-  margin-left: 1px;
-  font-weight: 300;
-  animation: blink 0.8s step-end infinite;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
 }
 
 img {
@@ -229,7 +177,6 @@ img {
 p {
   text-align: justify;
   font-weight: 400;
-  min-height: 4.5em;
 }
 
 /* LEAVES */
